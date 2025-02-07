@@ -17,7 +17,7 @@ public class pascal {
             for (int j=1; j<=n-i; j++){ // spaces
                 System.out.print(" "+" ");
             }
-            for (int j=0; j<=i; j++){
+            for (int j=0; j<=i; j++){ // pascals triangle
                 int icj = fact(i)/(fact(j)*fact(i-j));
                 System.out.print(icj+"   ");
             }
