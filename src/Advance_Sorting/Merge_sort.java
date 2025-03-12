@@ -46,6 +46,8 @@ public class Merge_sort {
         mergesort(b);
         // merge these 'a' and 'b'
         merge(a,b,arr);
+        // delete a and b : for space complexity
+        a = null; b = null;
     }
     public static void main(String[] args) {
         int[] arr = {80,30,50,60,10,70,40,20};
