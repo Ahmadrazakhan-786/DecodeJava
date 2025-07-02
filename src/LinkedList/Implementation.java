@@ -28,6 +28,30 @@ class SLL{
             head = temp;
         }
     }
+    void insert(int idx, int val){
+        if (idx == 0){
+            insetAtBeginning(val);
+            return;
+        }
+        if (idx == size){
+            insertAtEnd(val);
+            return;
+        }
+        if (idx > size){
+            System.out.println("Invalid index");
+            return;
+        }
+
+        Node temp = new Node(val);
+        Node x = head;
+        for (int i=1; i<=idx-1; i++){
+            x = x.next;
+        }
+        // insertion part
+        temp.next = x.next;
+        x.next = temp;
+        size++;
+    }
     void display(){
         Node temp = head;
         while (temp != null){
@@ -47,6 +71,11 @@ public class Implementation {
         list.insertAtEnd(40);
         list.display();
         list.insetAtBeginning(70);
+        list.display();
+        list.insert(2,100);
+        list.display();
+
+        list.insert(10,80);
         list.display();
     }
 }
