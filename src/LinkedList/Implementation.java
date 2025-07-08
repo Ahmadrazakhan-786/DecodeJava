@@ -52,6 +52,17 @@ class SLL{
         x.next = temp;
         size++;
     }
+    int getElement(int idx) throws Error{
+        if (idx == size-1) return tail.val;
+        if (idx >= size || idx <0){
+            throw new Error("Invalid Index");
+        }
+        Node temp = head;
+        for (int i=1; i<=idx; i++){
+            temp = temp.next;
+        }
+        return temp.val;
+    }
     void display(){
         Node temp = head;
         while (temp != null){
@@ -77,5 +88,9 @@ public class Implementation {
 
         list.insert(10,80);
         list.display();
+
+        System.out.println(list.getElement(3));
+        System.out.println(list.getElement(-1));
+        System.out.println(list.getElement(6));
     }
 }
