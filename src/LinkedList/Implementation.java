@@ -63,6 +63,19 @@ class SLL{
         }
         return temp.val;
     }
+    void set(int idx, int val) throws Error{
+        if (idx == size-1){
+            tail.val = val;
+        }
+        if (idx >= size || idx <0){
+            throw new Error("Invalid Index");
+        }
+        Node temp = head;
+        for (int i=1; i<=idx; i++){
+            temp = temp.next;
+        }
+        temp.val = val;
+    }
     void display(){
         Node temp = head;
         while (temp != null){
@@ -90,7 +103,10 @@ public class Implementation {
         list.display();
 
         System.out.println(list.getElement(3));
-        System.out.println(list.getElement(-1));
-        System.out.println(list.getElement(6));
+//        System.out.println(list.getElement(-1));
+//        System.out.println(list.getElement(6));
+
+        list.set(3,65);
+        list.display();
     }
 }
