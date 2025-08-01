@@ -76,6 +76,27 @@ class SLL{
         }
         temp.val = val;
     }
+    void deleteAtHead() throws Error{
+        if (head == null) throw new Error("List is Empty");
+        head = head.next;
+        size--;
+    }
+    void deleteAtIndex(int idx) throws Error{
+        if (idx == 0){
+            deleteAtHead();
+            return;
+        }
+        if (head == null) throw new Error("List is Empty");
+        if (idx<0 || idx>=size) throw new Error("Invalid Index");
+
+        Node temp = head;
+        for (int i=1; i<=idx-1; i++){
+            temp = temp.next; // temp ko aage badhana
+        }
+        if (temp.next == tail) tail = temp;
+        temp.next = temp.next.next;
+        size--;
+    }
     void display(){
         Node temp = head;
         while (temp != null){
@@ -108,5 +129,11 @@ public class Implementation {
 
         list.set(3,65);
         list.display();
+        list.deleteAtHead();
+        list.display();
+
+        list.deleteAtIndex(3);
+        list.display();
+
     }
 }
