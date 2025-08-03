@@ -9,9 +9,7 @@ class RLL{
 
 
     void insertAtEnd(int val){
-
         Node temp = new Node(val);
-
         if (head == null) {
             head = temp;
             tail = temp;
@@ -21,6 +19,20 @@ class RLL{
             tail.next = temp;
             tail = temp;
         }
+        size++;
+    }
+    void insertAtBeg(int val){
+        Node temp = new Node(val);
+        if (head == null){
+            head = temp;
+            tail = temp;
+            return;
+        }
+        else{
+            temp.next = head;
+            head = temp;
+        }
+        size++;
     }
 
     void display(){
@@ -40,6 +52,9 @@ public class Revision {
         list.insertAtEnd(20);
         list.insertAtEnd(40);
         list.insertAtEnd(50);
+        list.display();
+
+        list.insertAtBeg(30);
         list.display();
 
     }
