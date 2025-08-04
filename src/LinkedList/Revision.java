@@ -34,6 +34,25 @@ class RLL{
         }
         size++;
     }
+    void insert(int idx, int val){
+        if (idx == 0){
+            insertAtBeg(val);
+        }
+        if (idx == size){
+            insertAtEnd(val);
+        }
+        if (idx>size){
+            System.out.println("Invalid index");
+        }
+        Node temp = new Node(val);
+        Node x = head;
+        for (int i=1; i<=idx-1;i++){
+            x = x.next;
+        }
+        temp.next = x.next;
+        x.next = temp;
+        size++;
+    }
 
     void display(){
         Node temp = head;
@@ -55,6 +74,12 @@ public class Revision {
         list.display();
 
         list.insertAtBeg(30);
+        list.display();
+
+        list.insert(2,100);
+        list.display();
+
+        list.insert(10,100);
         list.display();
 
     }
