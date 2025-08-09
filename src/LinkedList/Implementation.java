@@ -117,23 +117,23 @@ public class Implementation {
         list.display();
         list.insetAtBeginning(70);
         list.display();
-        list.insert(2,100);
-        list.display();
+//        list.insert(2,100);
+//        list.display();
+//
+//        list.insert(10,80);
+//        list.display();
 
-        list.insert(10,80);
-        list.display();
-
-        System.out.println(list.getElement(3));
+//        System.out.println(list.getElement(3));
 //        System.out.println(list.getElement(-1));
 //        System.out.println(list.getElement(6));
 
         list.set(3,65);
         list.display();
-        list.deleteAtHead();
-        list.display();
-
-        list.deleteAtIndex(3);
-        list.display();
+//        list.deleteAtHead();
+//        list.display();
+//
+//        list.deleteAtIndex(3);
+//        list.display();
 
     }
 }

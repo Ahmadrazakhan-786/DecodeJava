@@ -53,6 +53,17 @@ class RLL{
         x.next = temp;
         size++;
     }
+    int getElement(int idx) throws Error{
+        if (idx == size-1) return tail.val;
+        if (idx < 0 || idx > size) {
+            throw new Error("Invalid index");
+        }
+        Node temp = head;
+        for (int i=1; i<=idx; i++){
+            temp = temp.next;
+        }
+        return temp.val;
+    }
 
     void display(){
         Node temp = head;
@@ -79,8 +90,11 @@ public class Revision {
         list.insert(2,100);
         list.display();
 
-        list.insert(10,100);
-        list.display();
+//       list.insert(10,100);
+//       list.display();
+
+        System.out.println(list.getElement(3));
+
 
     }
 }
