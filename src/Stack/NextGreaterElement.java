@@ -6,7 +6,7 @@ public class NextGreaterElement {
         int[] res = new int[arr.length]; // naya arr bna diya
 
         for (int i=0; i<arr.length;i++){
-            res[i] = -1; // agr next graeter ele nhi mila then it will work
+            res[i] = -1; // agr next greater ele nhi mila then it will work
             for (int j=i+1;j<arr.length;j++){
                 if (arr[j]>arr[i]){
                     res[i] = arr[j];
