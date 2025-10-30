@@ -22,7 +22,7 @@ public class InfixTopostfix {
                     String v2 = val.pop();
                     String v1 = val.pop();
                     char o = opr.pop();
-                    String t = v1 + v2 + o; // operatorv1v2
+                    String t = v1 + v2 + o; // v1v2operator
                     val.push(t);
                 }
                 opr.pop(); // '(' hata diya
@@ -33,7 +33,7 @@ public class InfixTopostfix {
                     String v2 = val.pop();
                     String v1 = val.pop();
                     char o = opr.pop();
-                    String t = v1 + v2 + o; // operatorv1v2
+                    String t = v1 + v2 + o; // v1v2operator
                     val.push(t);
                     // push
                     opr.push(ch);
@@ -44,7 +44,7 @@ public class InfixTopostfix {
                         String v2 = val.pop();
                         String v1 = val.pop();
                         char o = opr.pop();
-                        String t = v1 + v2 + o; // operatorv1v2
+                        String t = v1 + v2 + o; // v1v2operator
                         val.push(t);
                         // push
                         opr.push(ch);
@@ -58,7 +58,7 @@ public class InfixTopostfix {
             String v2 = val.pop();
             String v1 = val.pop();
             char o = opr.pop();
-            String t = v1 + v2 + o; // operatorv1v2
+            String t = v1 + v2 + o; // v1v2operator
             val.push(t);
         }
         String postfix = val.pop(); // jo val ke peek pe aaya usko nikal diya
