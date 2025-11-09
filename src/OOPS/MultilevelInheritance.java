@@ -18,7 +18,7 @@ class F extends E{
     }
 }
 
-public class MultilevelInheritance {
+public class MultilevelInheritance { // it is a bottom up approach
     public static void main(String[] args) {
         F obj = new F();
         obj.showA();

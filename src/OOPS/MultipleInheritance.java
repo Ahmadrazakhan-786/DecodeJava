@@ -1,11 +1,11 @@
 package OOPS;
 
 interface P{
-    void display();
+    void display(); // just declare the method , don't provide body
 }
 
 interface Q{
-    void show();
+    void show(); // just declare the method , don't provide body
 }
 
 class R implements P,Q{
@@ -25,3 +25,7 @@ public class MultipleInheritance {
         obj.show();
     }
 }
+// Note: we cant directly implement multiple inheritance in java but there is another way using 'interface':
+// it doesn't implement directly as it creates ambiguity in the code and bcz of ambiguity compiler will not
+// - understand to run the method of which class
+// object hmesha class ka bnta hai , interface ka nhi

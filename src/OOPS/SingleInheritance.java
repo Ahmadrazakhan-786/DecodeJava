@@ -12,7 +12,7 @@ class dog extends animal{
     }
 }
 
-public class SingleInheritance {
+public class SingleInheritance { // just one parent class and one child class
     public static void main(String[] args) {
         dog d = new dog();
         d.eat();
