@@ -25,19 +25,26 @@ public class NodeofTree {
         c.left = g;
         e.right = h;
 
-        a.left = null; // left subtree ka connection tod diya
+//        a.left = null; // left subtree ka connection tod diya
 
 //        System.out.println(b.val); // 4
 //        System.out.println(a.left.val); // 4
 //        System.out.println(e.val); // 6
 //        System.out.println(a.left.right.val); // 6
 
-        display(a);
+        display(a);// root node pass kar diya
+        System.out.println();
+//        a.left = null;
+        System.out.println(sum(a)); // iska matlab root node se jo tree bnta hai  uska sum
     }
     private static void display(Node root){
         if (root==null) return; // base case
         System.out.print(root.val + " ");// khud ki value print kardi
         display(root.left); // recursion ki help se left subtree display ho jaega
         display(root.right);// recursion ki help se right subtree display ho jaega
+    }
+    private static int sum(Node root){
+        if (root == null) return 0;
+        return root.val + sum(root.left) + sum(root.right);
     }
 }
