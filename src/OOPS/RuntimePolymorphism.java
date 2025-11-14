@@ -7,7 +7,7 @@ class Janwar{
 }
 
 class Dogesh extends Janwar{
-    @Override
+    @Override // without writing @Qverride the code will run fine but it is good practice to write
     void sound(){
         System.out.println("Dog barks");
     }
@@ -23,12 +23,10 @@ class catwa extends Janwar{
 public class RuntimePolymorphism {
     public static void main(String[] args) {
         Janwar j = new Janwar();
-        j.sound();
-
         Dogesh d = new Dogesh();
-        d.sound();
-
         catwa c = new catwa();
+        j.sound();
+        d.sound();
         c.sound();
     }
 }
