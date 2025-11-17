@@ -12,8 +12,8 @@ class Nodes{
 public class RecursiveNode {
     public static void recusivelist(Nodes head){
         if (head == null) return; // base case
-        System.out.println(head.val);
-        recusivelist(head.next);
+        System.out.println(head.val); // avi hamare pass head hai to usko print kar diya
+        recusivelist(head.next); // fir recursion aaage ki ele ko print kar dega
 
         // if we want to print the linked list in reverse order then:
 //        recusivelist(head.next);
