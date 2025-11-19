@@ -79,6 +79,7 @@ class SLL{
     void deleteAtHead() throws Error{
         if (head == null) throw new Error("List is Empty");
         head = head.next;
+        if (head==null) tail = null; // for one size ll
         size--;
     }
     void deleteAtIndex(int idx) throws Error{
@@ -105,18 +106,27 @@ class SLL{
         }
         System.out.println();
     }
+    boolean search(int val){
+        if (head == null) return false; // bcz agr ll khali hai to ele mili nhi
+        Node temp = head;
+        while (temp!=null){
+            if (temp.val == val) return true;
+            temp = temp.next;
+        }
+        return false ; // agr puri ll travel krne ke baad v nhi mili to return false
+    }
 }
 
 public class Implementation {
     public static void main(String[] args) {
         SLL list = new SLL();
-        list.insertAtEnd(10);
+//        list.insertAtEnd(10);
         list.insertAtEnd(20);
         list.insertAtEnd(30);
         list.insertAtEnd(40);
         list.display();
-        list.insetAtBeginning(70);
-        list.display();
+//        list.insetAtBeginning(70);
+//        list.display();
 //        list.insert(2,100);
 //        list.display();
 //
@@ -127,13 +137,17 @@ public class Implementation {
 //        System.out.println(list.getElement(-1));
 //        System.out.println(list.getElement(6));
 
-        list.set(3,65);
-        list.display();
+//        list.set(3,65);
+//        list.display();
 //        list.deleteAtHead();
 //        list.display();
 //
 //        list.deleteAtIndex(3);
 //        list.display();
+
+        list.deleteAtHead();
+        list.display();
+        System.out.println(list.search(40));
 
     }
 }
