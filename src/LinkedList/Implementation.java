@@ -9,7 +9,7 @@ class SLL{
         Node temp = new Node(val);
         if (head == null) { // LL is empty
             head = temp;
-            tail  = temp;
+            tail = temp;
         }
         else{ // LL is not empty
             tail.next = temp;
