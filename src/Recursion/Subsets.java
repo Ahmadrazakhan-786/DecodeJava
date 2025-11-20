@@ -6,7 +6,7 @@ public class Subsets {
     static ArrayList<String> arr = new ArrayList<>(); // global
     public static void subsets(int i, String s, String ans){
         if (i==s.length()){
-            arr.add(ans);
+            arr.add(ans); // jaise hi string ki len idx ke len ke equal hogi return kardenge usese pehle print
             return;
         }
         char ch = s.charAt(i); // taking a,b,c,d for its ith character
