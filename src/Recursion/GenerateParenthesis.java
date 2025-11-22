@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 public class GenerateParenthesis {
     public static void parenthesis(int open, int close, int n, String s ){
-        if (s.length() == 2*n){ // base case
+//        if (s.length() == 2*n){ // base case-1 : 2*n ka matlab hai jitte v left bracket right ke barabar ho gye
+//            System.out.println(s);
+//            return;
+//        }
+        if (close == n){ // base case-2 : iska matlab closing bracket complete ho gye i.e. == n
             System.out.println(s);
             return;
         }
