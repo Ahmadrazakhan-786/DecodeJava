@@ -11,5 +11,6 @@ public class PreInPost {
     }
     public static void main(String[] args) {
         pip(3);
+        // first find pip(1) and pip(2)
     }
 }
