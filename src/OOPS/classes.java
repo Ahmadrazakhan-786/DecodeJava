@@ -7,6 +7,7 @@ class Student{
 
     void display(){
         System.out.println(name);
+        System.out.println(rno);
     }
 }
 public class classes {

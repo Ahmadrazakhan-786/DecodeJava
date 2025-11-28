@@ -1,7 +1,7 @@
 package OOPS;
 
 abstract class Car{
-    abstract public void fueltype(); // abstract method-> dont have body just declare it
+    abstract public void fueltype(); // abstract method-> don't have body just declare it
     public void color(){ // normal method: not mandatory
         System.out.println("Black");
     }
@@ -34,5 +34,5 @@ public class Abstraction { // it can  be  achieved with either abstract classes 
 //Note:
  // 1.We can create object from class.
 // 2.We can't create an object of abstract class
-//3.There is also a special type of abstract method-> Abstract method which dont have body just declare it
+//3.There is also a special type of abstract method-> Abstract method which don't have body just declare it
 
