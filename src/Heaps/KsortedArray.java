@@ -22,7 +22,5 @@ public class KsortedArray { // TC -> O(nlogk)
         }
         System.out.print(ans);
 
-
-
     }
 }
