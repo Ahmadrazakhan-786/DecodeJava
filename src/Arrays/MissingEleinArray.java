@@ -9,6 +9,6 @@ public class MissingEleinArray {
         for (int i=0; i<arr.length; i++){
             arrSum += arr[i];
         }
-        System.out.print((int)(sum-arrSum));
+        System.out.print (sum-arrSum);
     }
 }
