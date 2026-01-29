@@ -9,10 +9,10 @@ public class MoveZeroes {
         ArrayList<Integer> arr = new ArrayList<>();
         int noz = 0;
         for (int ele : nums){
-            if (ele!=0) arr.add(ele);
-            else noz++;
+            if (ele!=0) arr.add(ele); // agr nums me non zero ele nhi hai to seedhe arr list me add akrdo
+            else noz++; // agr zeros hua to increment kadr do noz ko
         }
-        for (int i=0; i<=noz; i++){
+        for (int i=0; i<=noz; i++){ // ab unhi noz ko arr list ko push kar do 
             arr.add(0);
         }
         for (int i=0; i< nums.length; i++){  // Copy elements back to the original array
