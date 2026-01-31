@@ -14,7 +14,7 @@ public class SelectionSort {
 
         for (int i=0; i<n-1; i++){
             int min = Integer.MAX_VALUE;
-            int mindx = -1;
+            int mindx = -1; // ye min ele ke idx nikalne ke liye hai
             for (int j=i; j<n; j++){
                 if (arr[j] < min){
                     min = arr[j];
