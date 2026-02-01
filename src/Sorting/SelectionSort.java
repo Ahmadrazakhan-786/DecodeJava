@@ -28,4 +28,24 @@ public class SelectionSort {
         }
         print(arr);
     }
+        // M-2:
+        // Har pass me largest element nikaal ke LAST me daalna hai
+        // Aur final array ascending order me hona chahiye
+
+//        for (int i=n-1; i>0; i--){
+//            int max = Integer.MIN_VALUE;
+//            int mindx = -1; // ye max ele ke idx nikalne ke liye hai
+//            for (int j=0; j<i; j++){
+//                if (arr[j] > max){
+//                    max = arr[j];
+//                    mindx = j;
+//                }
+//            }
+//            // swap arr[i] and arr[mindx]
+//            int temp = arr[i];
+//            arr[i] = arr[mindx];
+//            arr[mindx] = temp;
+//        }
+//        print(arr);
+//    }
 }
